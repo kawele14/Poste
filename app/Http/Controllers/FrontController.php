@@ -87,7 +87,7 @@ class FrontController extends Controller
     }
 
     public function condition(){
-        return view('front.condition.index', [
+        return view('front.admin.index', [
             'pageTitle' => "Conditions",
         ]);
     }

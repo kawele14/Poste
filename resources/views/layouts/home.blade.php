@@ -62,7 +62,7 @@ body {
           
           <div class="col-11 col-xl-2">
             
-                <img src="{{ asset('images/logo/logo_gf.PNG') }}" alt="">
+                <img src="https://www.post-bk.com/images/ll.jpg" alt="" width="70" height="50">
                 
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
@@ -103,25 +103,13 @@ body {
                 <li><a href="{{ route('front.condition') }}"><span>Conditions</span></a></li>
                 <li><a href="{{ route('front.loan') }}"><span>Request a credit </span></a></li>
                 <li><a href="{{ route('front.contact') }}"><span>Contact</span></a></li>
-               <!-- <li class="has-children">
-                  <a href="about.html"><span>Dropdown</span></a>
+                <li class="has-children">
+                  <a href="services.html"><span class="">Connexion</span></a>
                   <ul class="dropdown arrow-top">
-                    <li><a href="#">Menu One</a></li>
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                    <li class="has-children">
-                      <a href="#">Dropdown</a>
-                      <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                        <li><a href="#">Menu Four</a></li>
-                      </ul>
-                    </li>
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Devenir un cleint</a></li>
                   </ul>
-                </li>-->
-
-                
+                </li>
               </ul>
             </nav>
           </div>

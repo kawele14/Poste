@@ -53,6 +53,6 @@ Route::get('/condition', [
     'as' => 'front.condition',
     'uses' => 'FrontController@condition',
 ]);
-Auth::routes(['register' => false]);
+Auth::routes(['register' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
