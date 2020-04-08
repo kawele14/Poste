@@ -53,6 +53,27 @@ Route::get('/condition', [
     'as' => 'front.condition',
     'uses' => 'FrontController@condition',
 ]);
+
+
+
+
+//Users
+Route::get('/dashboard/personnal_info', [
+    'as' => 'front.users.info',
+    'uses' => 'UsersController@addPersonal',
+]);
+Route::get('/dashboard/account_info', [
+    'as' => 'front.users.account',
+    'uses' => 'UsersController@addAccount',
+]);
+Route::post('/contact/send/message_modal', [
+    'as' => 'front.users.send.message',
+    'uses' => 'UsersController@sendMessage',
+]);
+
+
+
+
 Auth::routes(['register' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UsersController@index')->name('home');

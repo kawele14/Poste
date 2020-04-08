@@ -9,27 +9,26 @@
 
     <title>{{ config('app.name', 'G Finance') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="{{ asset('vendors/nprogress/nprogress.css') }}" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="{{ asset('vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
 	
     <!-- bootstrap-progressbar -->
-    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="{{ asset('vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <link href="{{ asset('vendors/jqvmap/dist/jqvmap.min.css') }}" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="{{ asset('vendors/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
+    <!-- la concubine de l'hemoglobine -->
+    <link rel="stylesheet" href="{{ asset('tel/build/css/intlTelInput.css') }}">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="{{ asset('build/css/custom.min.css') }}" rel="stylesheet">
 
 </head>
 <body class="nav-md">
@@ -62,99 +61,24 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="{{ route('home') }}"><i class="fa fa-home"></i> Home</a>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> Personnal Info <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
+                      <li><a href="{{ route('front.users.info') }}">View your details</a></li>
+                      <li><a href="{{ route('front.users.info') }}">Update your details</a></li>
+                      <li><a href="">Change your password</a></li>
+                      <li><a href="">Disable Account</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> Transfert <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="form.html">General Form</a></li>
-                      <li><a href="form_advanced.html">Advanced Components</a></li>
-                      <li><a href="form_validation.html">Form Validation</a></li>
-                      <li><a href="form_wizards.html">Form Wizard</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li>
+                      <li><a href="{{ route('home') }}">Tranfert</a></li>
+                      <li><a href="{{ route('front.users.account') }}">Account Info</a></li>
+                      <li><a href="{{ route('home') }}">Check your balance</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                      <li><a href="media_gallery.html">Media Gallery</a></li>
-                      <li><a href="typography.html">Typography</a></li>
-                      <li><a href="icons.html">Icons</a></li>
-                      <li><a href="glyphicons.html">Glyphicons</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                      <li><a href="invoice.html">Invoice</a></li>
-                      <li><a href="inbox.html">Inbox</a></li>
-                      <li><a href="calendar.html">Calendar</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Chart JS</a></li>
-                      <li><a href="chartjs2.html">Chart JS2</a></li>
-                      <li><a href="morisjs.html">Moris JS</a></li>
-                      <li><a href="echarts.html">ECharts</a></li>
-                      <li><a href="other_charts.html">Other Charts</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
-                      <li><a href="projects.html">Projects</a></li>
-                      <li><a href="project_detail.html">Project Detail</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
-                      <li><a href="profile.html">Profile</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="page_403.html">403 Error</a></li>
-                      <li><a href="page_404.html">404 Error</a></li>
-                      <li><a href="page_500.html">500 Error</a></li>
-                      <li><a href="plain_page.html">Plain Page</a></li>
-                      <li><a href="login.html">Login Page</a></li>
-                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="#level1_1">Level One</a>
-                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                          <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Level Two</a>
-                            </li>
-                            <li><a href="#level2_1">Level Two</a>
-                            </li>
-                            <li><a href="#level2_2">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#level1_2">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                  <li><a href="" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-home"></i> Contact us</a>
                 </ul>
               </div>
 
@@ -227,42 +151,7 @@
                         </span>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="dropdown-item">
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
+                    
                     <li class="nav-item">
                       <div class="text-center">
                         <a class="dropdown-item">
@@ -279,53 +168,107 @@
         </div>
         <!-- /top navigation -->
 
-
-         <!-- page content -->
-         <div class="right_col" role="main">
-            <!-- top tiles -->
-            <div class="row" style="display: inline-block;" >
-            <div class="tile_count">
-              <div class="col-md-2 col-sm-4  tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                <div class="count">2500</div>
-                <span class="count_bottom"><i class="green">4% </i> From last Week</span>
-              </div>
-              <div class="col-md-2 col-sm-4  tile_stats_count">
-                <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
-                <div class="count">123.50</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
-              </div>
-              <div class="col-md-2 col-sm-4  tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
-                <div class="count green">2,500</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-              </div>
-              <div class="col-md-2 col-sm-4  tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-                <div class="count">4,567</div>
-                <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-              </div>
-              <div class="col-md-2 col-sm-4  tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-                <div class="count">2,315</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-              </div>
-              <div class="col-md-2 col-sm-4  tile_stats_count">
-                <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-                <div class="count">7,325</div>
-                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-              </div>
-            </div>
-          </div>
+        
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+        <!-- modals -->
+
+        <div tabindex="-1" class="modal fade bs-example-modal-lg" role="dialog" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+<br><br><br><br>
+              <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Contact us</h4>
+                <button class="close" type="button" data-dismiss="modal"><span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+                  <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+              
+                      <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+                        <div class="row justify-content-center">
+                          <div class="col-md-8 text-center">
+                            <h1></h1>
+                            <p data-aos="fade-up" data-aos-delay="100"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              
+                <div class="site-section bg-light">
+              
+                        <form class="p-5 bg-white" style="margin-top: -150px;"
+                        action="{{ route('front.users.send.message') }}"
+                        method="post">
+                        @csrf
+                          <div class="row form-group">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                              <label class="text-black" for="fname">First Name</label>
+                              <input type="text" id="fname" name="fname" class="form-control">
+                            </div>
+                            <div class="col-md-6">
+                              <label class="text-black" for="lname">Last Name</label>
+                              <input type="text" id="lname" name="lname" class="form-control">
+                            </div>
+                          </div>
+              
+                          <div class="row form-group">
+                            
+                            <div class="col-md-12">
+                              <label class="text-black" for="email">Email</label> 
+                              <input type="email" id="email" name="email" class="form-control">
+                            </div>
+                          </div>
+              
+                          <div class="row form-group">
+                            
+                            <div class="col-md-12">
+                              <label class="text-black" for="subject">Subject</label> 
+                              <input type="subject" id="subject" name="subject" class="form-control">
+                            </div>
+                          </div>
+              
+                          <div class="row form-group">
+                            <div class="col-md-12">
+                              <label class="text-black" for="message">Message</label> 
+                              <textarea name="message" id="message" name="message" cols="30" rows="7" class="form-control" placeholder="..."></textarea>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                          <div class="row form-group m-auto">
+                            <div class="col-md-12">
+                              <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              </form>
+              </div>
+        </div>
+          </div>
+        </div>
+
+        <!-- /modals -->
+      </div>
+    </div>
+
+
+
       <!-- footer content -->
       <footer>
         <div class="pull-right">
-          Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+
         </div>
         <div class="clearfix"></div>
       </footer>
@@ -336,45 +279,89 @@
 </div>
 
   <!-- jQuery -->
-  <script src="../vendors/jquery/dist/jquery.min.js"></script>
+  <script src="{{ asset('vendors/jquery/dist/jquery.min.js') }}"></script>
   <!-- Bootstrap -->
-  <script src="../vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('vendors/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
   <!-- FastClick -->
-  <script src="../vendors/fastclick/lib/fastclick.js"></script>
+  <script src="{{ asset('vendors/fastclick/lib/fastclick.js') }}"></script>
   <!-- NProgress -->
-  <script src="../vendors/nprogress/nprogress.js"></script>
+  <script src="{{ asset('vendors/nprogress/nprogress.js') }}"></script>
   <!-- Chart.js -->
-  <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+  <script src="{{ asset('vendors/Chart.js/dist/Chart.min.js') }}"></script>
   <!-- gauge.js -->
-  <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+  <script src="{{ asset('vendors/gauge.js/dist/gauge.min.js') }}"></script>
   <!-- bootstrap-progressbar -->
-  <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+  <script src="{{ asset('vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') }}"></script>
   <!-- iCheck -->
-  <script src="../vendors/iCheck/icheck.min.js"></script>
+  <script src="{{ asset('vendors/iCheck/icheck.min.js') }}"></script>
   <!-- Skycons -->
-  <script src="../vendors/skycons/skycons.js"></script>
+  <script src="{{ asset('vendors/skycons/skycons.js') }}"></script>
   <!-- Flot -->
-  <script src="../vendors/Flot/jquery.flot.js"></script>
-  <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-  <script src="../vendors/Flot/jquery.flot.time.js"></script>
-  <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-  <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+  <script src="{{ asset('vendors/Flot/jquery.flot.js') }}"></script>
+  <script src="{{ asset('vendors/Flot/jquery.flot.pie.js') }}"></script>
+  <script src="{{ asset('vendors/Flot/jquery.flot.time.js') }}"></script>
+  <script src="{{ asset('vendors/Flot/jquery.flot.stack.js') }}"></script>
+  <script src="{{ asset('vendors/Flot/jquery.flot.resize.js') }}"></script>
   <!-- Flot plugins -->
-  <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-  <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-  <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+  <script src="{{ asset('vendors/flot.orderbars/js/jquery.flot.orderBars.js') }}"></script>
+  <script src="{{ asset('vendors/flot-spline/js/jquery.flot.spline.min.js') }}"></script>
+  <script src="{{ asset('vendors/flot.curvedlines/curvedLines.js') }}"></script>
   <!-- DateJS -->
-  <script src="../vendors/DateJS/build/date.js"></script>
+  <script src="{{ asset('vendors/DateJS/build/date.js') }}"></script>
   <!-- JQVMap -->
-  <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-  <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-  <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+  <script src="{{ asset('vendors/jqvmap/dist/jquery.vmap.js') }}"></script>
+  <script src="{{ asset('vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+  <script src="{{ asset('vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
   <!-- bootstrap-daterangepicker -->
-  <script src="../vendors/moment/min/moment.min.js"></script>
-  <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="{{ asset('vendors/moment/min/moment.min.js') }}"></script>
+  <script src="{{ asset('vendors/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+  
 
   <!-- Custom Theme Scripts -->
-  <script src="../build/js/custom.min.js"></script>
-  
+  <script src="{{ asset('build/js/custom.min.js') }}"></script>
+
+  <script src="{{ asset('tel/build/js/intlTelInput.js') }}"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input);
+
+    var input = document.querySelector("#phone"),
+  errorMsg = document.querySelector("#error-msg"),
+  validMsg = document.querySelector("#valid-msg");
+
+// here, the index maps to the error code returned from getValidationError - see readme
+var errorMap = ["Invalid number", "Invalid country code", "Too short", "Too long", "Invalid number"];
+
+// initialise plugin
+var iti = window.intlTelInput(input, {
+utilsScript: "{{ asset('tel/build/js/utils.js?1562189064761') }}"
+});
+
+var reset = function() {
+input.classList.remove("error");
+errorMsg.innerHTML = "";
+errorMsg.classList.add("hide");
+validMsg.classList.add("hide");
+};
+
+// on blur: validate
+input.addEventListener('blur', function() {
+reset();
+if (input.value.trim()) {
+if (iti.isValidNumber()) {
+validMsg.classList.remove("hide");
+} else {
+input.classList.add("error");
+var errorCode = iti.getValidationError();
+errorMsg.innerHTML = errorMap[errorCode];
+errorMsg.classList.remove("hide");
+}
+}
+});
+
+// on keyup / change flag: reset
+input.addEventListener('change', reset);
+input.addEventListener('keyup', reset);
+  </script>  
 </body>
 </html>
