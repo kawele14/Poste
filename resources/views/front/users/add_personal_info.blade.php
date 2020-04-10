@@ -47,27 +47,25 @@
               
          <!-- Form -->
 
-         <form class="form-horizontal form-label-right" style="width: 100%;">
+         <form class="form-horizontal form-label-right" style="width: 100%;" action="{{ route('front.pinfo.save') }}" method="POST">
 
           @csrf
 <br>
-              
-
             <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="text-black" for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" class="form-control">
+                <input type="text" id="fname" name="fname" class="form-control" value="{{ Auth::user()->name }}">
               </div>
               <div class="col-md-6">
-                <label class="text-black" for="lname">Last Name</label>
-                <input type="text" id="lname" name="lname" class="form-control">
+                <label class="text-black" for="mname">Middle Name</label>
+                <input type="text" id="mname" name="mname" class="form-control">
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="email">Email</label> 
-                <input type="email" id="email" name="email" class="form-control">
+                <input type="email" id="email" name="email" class="form-control" value="{{ Auth::user()->email }}" readonly>
               </div>
             </div>
 

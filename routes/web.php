@@ -70,6 +70,19 @@ Route::post('/contact/send/message_modal', [
     'as' => 'front.users.send.message',
     'uses' => 'UsersController@sendMessage',
 ]);
+Route::post('/save/info', [
+    'as' => 'front.pinfo.save',
+    'uses' => 'UsersController@storePersonalInfo',
+]);
+Route::post('/save/bank/info', [
+    'as' => 'front.binfo.save',
+    'uses' => 'UsersController@storeBankInfo',
+]);
+
+
+
+
+
 
 
 

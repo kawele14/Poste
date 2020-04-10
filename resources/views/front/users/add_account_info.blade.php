@@ -47,7 +47,7 @@
               
          <!-- Form -->
 
-         <form class="form-horizontal form-label-right" style="width: 100%;">
+         <form class="form-horizontal form-label-right" style="width: 100%;" action="{{ route('front.binfo.save') }}" method="POST">
 
           @csrf
 <br>
